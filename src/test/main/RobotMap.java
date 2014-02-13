@@ -1,4 +1,5 @@
 package test.main;
+import edu.wpi.first.wpilibj.Talon;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -7,6 +8,12 @@ package test.main;
  * floating around.
  */
 public class RobotMap {
+    public static Talon leftCatapult;
+    public static Talon rightCatapult;
+    public static void init(){
+        leftCatapult = new Talon(2);
+        rightCatapult = new Talon(6);
+    }
     // For example to map the left and right motors, you could define the
     // following variables to use with your drivetrain subsystem.
     // public static final int leftMotor = 1;
